@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:get/get.dart';
 
 enum Page { HOME, SEARCH, UPLOAD, REELS, MYPAGE }
@@ -22,6 +24,19 @@ class BottomNavController extends GetxController {
   }
 
   void moveToPage(int value) {
+    if (_history.last != value && Platform.isAndroid) {
+      _history.add(value);
+    }
     _pageIndex(value);
+  }
+
+  Future<bool> popAction() async {
+    if (_history.length == 1) {
+      return true;
+    } else {
+      _history.removeLast();
+      _pageIndex(_history.last);
+      return false;
+    }
   }
 }

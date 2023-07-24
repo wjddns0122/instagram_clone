@@ -10,9 +10,12 @@ class App extends GetView<BottomNavController> {
   @override
   Widget build(BuildContext context) {
     return Obx(
-      () => Scaffold(
-        body: _body(),
-        bottomNavigationBar: _bottom(),
+      () => WillPopScope(
+        onWillPop: controller.popAction,
+        child: Scaffold(
+          body: _body(),
+          bottomNavigationBar: _bottom(),
+        ),
       ),
     );
   }
@@ -45,12 +48,12 @@ class App extends GetView<BottomNavController> {
         const BottomNavigationBarItem(
             icon: ImageAvatar(
               url:
-                  'https://i.namu.wiki/i/1qw3h7kT7UX47Ms2rU0tt32PhsprNT5LKKrX2Xc08nHE5DTUxACuTf_qtfJ6q-N8TfbU-hgWBXpLsG-BsE_HBAExyV-Z5Zo6Ypr-eRW8Bsh3IWOIEMQTq5e0wHmSndZOQnflaAqk_QeAryuMkjcbKw.webp',
+                  'https://cdn.topstarnews.net/news/photo/202212/14825385_1049663_2440.jpg',
               type: AvatarType.OFF,
             ),
             activeIcon: ImageAvatar(
               url:
-                  'https://i.namu.wiki/i/1qw3h7kT7UX47Ms2rU0tt32PhsprNT5LKKrX2Xc08nHE5DTUxACuTf_qtfJ6q-N8TfbU-hgWBXpLsG-BsE_HBAExyV-Z5Zo6Ypr-eRW8Bsh3IWOIEMQTq5e0wHmSndZOQnflaAqk_QeAryuMkjcbKw.webp',
+                  'https://cdn.topstarnews.net/news/photo/202212/14825385_1049663_2440.jpg',
               type: AvatarType.ON,
             ),
             label: 'home')
