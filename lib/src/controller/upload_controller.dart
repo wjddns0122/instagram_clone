@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:instagram/view/albums.dart';
 import 'package:photo_manager/photo_manager.dart';
 
 import '../data/model/album_model.dart';
@@ -38,5 +39,14 @@ class UploadController extends GetxController {
         });
       }
     });
+  }
+
+  void changeAlbum() {
+    Get.to(() => const Albums(), transition: Transition.downToUp);
+  }
+
+  void changeIndex(int value) {
+    _index(value);
+    Get.back();
   }
 }

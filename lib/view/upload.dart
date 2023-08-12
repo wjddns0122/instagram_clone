@@ -62,10 +62,13 @@ class Upload extends GetView<UploadController> {
             children: [
               (controller.albums.isEmpty)
                   ? Container()
-                  : Text(
-                      controller.albums[0].name!,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20),
+                  : GestureDetector(
+                      onTap: controller.changeAlbum,
+                      child: Text(
+                        controller.albums[0].name!,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
+                      ),
                     ),
               ImageData(
                 path: ImagePath.downArrow,
