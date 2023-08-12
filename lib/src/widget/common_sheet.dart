@@ -3,16 +3,18 @@ import 'package:instagram/src/widget/image_data.dart';
 
 import 'image_avatar.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class CommentSheet extends StatelessWidget {
+  const CommentSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
       child: Column(
-        _header(),
-        _body(),
+        children: [
+          _header(),
+          _body(),
+        ],
       ),
     );
   }

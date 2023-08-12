@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:instagram/src/binding/init_binding.dart';
 
-import 'src/app.dart';
+import 'app.dart';
 
 void main() {
   runApp(const MyApp());

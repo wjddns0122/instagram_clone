@@ -4,6 +4,9 @@ import 'package:instagram/src/controller/bottom_nav_controller.dart';
 import 'package:instagram/src/widget/image_avatar.dart';
 import 'package:instagram/src/widget/image_data.dart';
 
+import 'view/home.dart';
+import 'view/search.dart';
+
 class App extends GetView<BottomNavController> {
   const App({super.key});
 
@@ -65,14 +68,10 @@ class App extends GetView<BottomNavController> {
     return IndexedStack(
       index: controller.index,
       children: [
+        const Home(),
+        const Search(),
         Container(
-          color: Colors.red,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.green,
+          color: Colors.yellow,
         ),
         Container(
           color: Colors.yellow,
