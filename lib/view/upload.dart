@@ -45,11 +45,18 @@ class Upload extends GetView<UploadController> {
   }
 
   Widget _preview() {
-    return Container(
-      width: Get.width,
-      height: Get.width,
-      color: Colors.black,
-    );
+    return (controller.selectImage == null)
+        ? Container(
+            width: Get.width,
+            height: Get.width,
+            color: Colors.black,
+          )
+        : SizedBox(
+            width: Get.width,
+            height: Get.width,
+            child: UploadImage(
+                entity: controller.selectImage!, fit: BoxFit.contain),
+          );
   }
 
   Widget _header() {
@@ -105,16 +112,21 @@ class Upload extends GetView<UploadController> {
         ? Container()
         : Expanded(
             child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 4,
-                    mainAxisSpacing: 1.0,
-                    crossAxisSpacing: 1.0),
-                itemCount: controller.albums[controller.index].images!.length,
-                itemBuilder: (context, index) {
-                  final image =
-                      controller.albums[controller.index].images![index];
-                  return UploadImage(entity: image, fit: BoxFit.cover);
-                }),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  mainAxisSpacing: 1.0,
+                  crossAxisSpacing: 1.0),
+              itemCount: controller.albums[controller.index].images!.length,
+              itemBuilder: (context, index) {
+                final image =
+                    controller.albums[controller.index].images![index];
+                return GestureDetector(
+                    onTap: () {
+                      controller.select(image);
+                    },
+                    child: UploadImage(entity: image, fit: BoxFit.cover));
+              },
+            ),
           );
   }
 }

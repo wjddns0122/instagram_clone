@@ -6,9 +6,11 @@ import '../data/model/album_model.dart';
 
 class UploadController extends GetxController {
   final Rx<List<AlbumModel>> _albums = Rx<List<AlbumModel>>([]);
+  final Rxn<AssetEntity> _selectImage = Rxn<AssetEntity>();
   final RxInt _index = 0.obs;
 
   List<AlbumModel> get albums => _albums.value;
+  AssetEntity? get selectImage => _selectImage.value;
   int get index => _index.value;
 
   @override
@@ -48,5 +50,9 @@ class UploadController extends GetxController {
   void changeIndex(int value) {
     _index(value);
     Get.back();
+  }
+
+  void select(AssetEntity e) {
+    _selectImage(e);
   }
 }
