@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import '../src/widget/feed.dart';
-import '../src/widget/image_avatar.dart';
-import '../src/widget/image_data.dart';
+import '../widget/feed.dart';
+import '../widget/image_avatar.dart';
+import '../widget/image_data.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

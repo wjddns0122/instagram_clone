@@ -72,4 +72,5 @@ class ImagePath {
   static String get mypageBottomSheetSetting07 =>
       'assets/images/mypage_bottom_sheet_setting_07.jpg';
   static String get downArrow => 'assets/images/down_arrow_icon.jpg';
+  static String get splash => 'assets/images/splash.png';
 }

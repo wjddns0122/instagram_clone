@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:instagram/view/search_focus.dart';
+import 'package:instagram/src/view/search_focus.dart';
 
-import '../src/widget/search_grid_view.dart';
+import '../widget/search_grid_view.dart';
 
 class Search extends StatelessWidget {
   const Search({super.key});
@@ -44,8 +44,8 @@ class Search extends StatelessWidget {
           height: 40,
           decoration: BoxDecoration(
               color: Colors.black12, borderRadius: BorderRadius.circular(8.0)),
-          child: Row(
-            children: const [
+          child: const Row(
+            children: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 15.0),
                 child: Icon(

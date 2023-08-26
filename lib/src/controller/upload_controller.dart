@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:instagram/view/albums.dart';
+import 'package:instagram/src/view/albums.dart';
 import 'package:photo_manager/photo_manager.dart';
 
 import '../data/model/album_model.dart';

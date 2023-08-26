@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:instagram/src/controller/upload_controller.dart';
 import 'package:instagram/src/widget/upload_image.dart';
 
-import '../src/widget/image_data.dart';
+import '../widget/image_data.dart';
 
 class Albums extends GetView<UploadController> {
   const Albums({super.key});

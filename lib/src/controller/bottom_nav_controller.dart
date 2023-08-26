@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:get/get.dart';
 import 'package:instagram/src/binding/upload_binding.dart';
-import 'package:instagram/view/upload.dart';
+import 'package:instagram/src/view/upload.dart';
 
 enum Page { HOME, SEARCH, UPLOAD, REELS, MYPAGE }
 

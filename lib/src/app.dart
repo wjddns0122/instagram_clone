@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:instagram/src/controller/bottom_nav_controller.dart';
 import 'package:instagram/src/widget/image_avatar.dart';
 import 'package:instagram/src/widget/image_data.dart';
-import 'package:instagram/view/mypage.dart';
+import 'package:instagram/src/view/mypage.dart';
 
 import 'view/home.dart';
 import 'view/search.dart';
